@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "lint": "eslint src/*.js"
+    "lint": "eslint src/*.js",
+    "cypress:open": "cypress open"
+
+
   },
   "repository": {
     "type": "git",
