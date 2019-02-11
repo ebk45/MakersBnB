@@ -2,11 +2,8 @@
 const express = require('express'),
     server = express();
 
-
 const typeorm = require("typeorm"); // import * as typeorm from "typeorm";
-// const Post = require("./model/Post").Post; // import {Post} from "./model/Post";
-// const Category = require("./model/Category").Category; // import {Category} from "./model/Category";
-const Listing = require("./app/model/Listing").Listing;
+const Listing = require("./app/model/Listing").Listing; // import {Listing} from "./app/model/Listing";
 
 require("reflect-metadata");
 
@@ -33,19 +30,8 @@ server.listen(3000, ()=>{
     console.log('Express server started at port 3000');
 });
 
-typeorm.createConnection({
-    type: "postgres",
-    host: "localhost",
-    port: 5432,
-    username: "postgres",
-    password: "",
-    database: "makersbnb",
-    synchronize: true,
-    logging: false,
-    entities: [
-        require("./app/entity/ListingSchema"),
-    ]
-}).then(function (connection) {
+typeorm.createConnection()
+    .then(function (connection) {
 
 
     let listing0 = new Listing();
@@ -63,13 +49,12 @@ typeorm.createConnection({
             listing.description = "It's a pretty house";
             listing.price = 10;
 
-            let postRepository = connection.getRepository(Listing);
-            postRepository.save(listing)
+            let listingRepository = connection.getRepository(Listing);
+            listingRepository.save(listing)
                 .then(function(savedListing) {
                     console.log("Listing has been saved: ", savedListing);
                     console.log("Now lets load all posts: ");
-
-                    return postRepository.find();
+                    return listingRepository.find();
                 })
                 .then(function(allListings) {
                     console.log("All listings: ", allListings);
