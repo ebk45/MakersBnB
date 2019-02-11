@@ -1,0 +1,26 @@
+{
+  "name": "makersbnb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ellieturno/MakersBnB.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ellieturno/MakersBnB/issues"
+  },
+  "homepage": "https://github.com/ellieturno/MakersBnB#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "cypress": "^3.1.5",
+    "jest": "^24.1.0"
+  }
+}
