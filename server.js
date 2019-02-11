@@ -2,6 +2,8 @@
 const express = require('express'),
     server = express();
 
+// import "reflect-metadata";
+
 server.set('port', process.env.PORT || 3000);
 
 //Basic routes
