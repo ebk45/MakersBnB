@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cypress",
-    "lint": "eslint cypress/*/*.js",
+    "test": "$(npm bin)/cypress run --record  --key 6e551b3c-9d2f-48e8-9980-dd7ae1950161",
+    "lint": "eslint cypress/*/*.js" ,
     "cypress:open": "cypress open"
   },
   "repository": {
