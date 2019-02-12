@@ -9,4 +9,5 @@ module.exports = (app) => {
     app.get('/api/listings', listingsController.list);
     app.get('/api/listings/:id', listingsController.retrieve);
     app.delete('/api/listings/:id', listingsController.delete)
+    app.put('/api/listings/:id', listingsController.update)
 };
