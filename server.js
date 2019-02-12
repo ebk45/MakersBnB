@@ -2,6 +2,7 @@
 
 // const db = require('./app/model/DatabaseConnection')
 const db = require('./models/index')
+const Listing = require('./models/index')
 
 const express = require('express'),
     server = express();
@@ -29,4 +30,13 @@ server.listen(3000, ()=>{
     console.log('Express server started at port 3000');
 });
 
-console.log(db.sequelize)
+
+Listing.create(
+    {
+        name: 'house',
+        description: 'description',
+        price: 10
+    }
+)
+
+
