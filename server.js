@@ -3,21 +3,21 @@ const express = require('express');
 const server = express();
 
 server.set('port', process.env.PORT || 3000);
-
+server.set('view engine', 'ejs');
 //Basic routes
 server.get('/', (request,response)=>{
-    res.render('pages/signup');
+    response.render('pages/signup');
 });
 
 server.get('/spaces',(request,response)=>{
-    res.render('pages/spaces');
+    response.render('pages/spaces');
 });
 
 //Express error handling middleware
 server.use((request,response)=>{
     response.type('text/plain');
     response.status(505);
-    res.render('pages/error');
+    response.render('pages/error');
 });
 
 //Binding to a port
