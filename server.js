@@ -1,11 +1,17 @@
 //server.js
 
 // const db = require('./app/model/DatabaseConnection')
-const db = require('./models/index')
-const Listing = require('./models/index')
+const db = require('./server/models/index')
+const Listing = require('./server/models/index')
+
 
 const express = require('express'),
     server = express();
+
+require('./server/routes')(server);
+server.get('*', (req, res) => res.status(200).send({
+    message: 'Welcome to the beginning of nothingness.',
+}));
 
 server.set('port', process.env.PORT || 3000);
 
@@ -30,13 +36,13 @@ server.listen(3000, ()=>{
     console.log('Express server started at port 3000');
 });
 
-
-Listing.create(
-    {
-        name: 'house',
-        description: 'description',
-        price: 10
-    }
-)
+// console.log(db.sequelize.model(listing))
+// Listing.create(
+//     {
+//         name: 'house',
+//         description: 'description',
+//         price: 10
+//     }
+// )
 
 
