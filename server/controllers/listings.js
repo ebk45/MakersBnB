@@ -30,5 +30,19 @@ module.exports = {
             })
             .catch(error => res.status(400).send(error))
     },
-
+    delete(req, res) {
+        return Listing
+            .findById(req.params.id)
+            .then(listing => {
+                if (!listing) {
+                    return res.status(400).send({
+                        message: 'listing not found'
+                    })
+                }
+                return listing
+                    .destroy()
+                    .then(() => res.status(204).send())
+            })
+            .catch((error) => res.status(400).send(error))
+    }
 };

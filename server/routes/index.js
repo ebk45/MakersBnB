@@ -8,4 +8,5 @@ module.exports = (app) => {
     app.post('/api/listings', listingsController.create);
     app.get('/api/listings', listingsController.list);
     app.get('/api/listings/:id', listingsController.retrieve);
+    app.delete('/api/listings/:id', listingsController.delete)
 };
