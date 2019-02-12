@@ -9,8 +9,12 @@ server.get('/', (request,response)=>{
     response.render('pages/signup');
 });
 
-server.get('/spaces',(request,response)=>{
-    response.render('pages/spaces');
+server.get('/feed',(request,response)=>{
+    response.render('pages/feed');
+});
+
+server.get('/listing', (request, response)=>{
+    response.render('pages/listing');
 });
 
 //Express error handling middleware
