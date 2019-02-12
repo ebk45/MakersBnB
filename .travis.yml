@@ -2,6 +2,10 @@ language: node_js
 node_js:
  - "node"
 
+before_script:
+ - psql -c 'create database makersbnb-dev;' -U postgres
+
+
 cache:
  npm: true # this cashes ~/.npm folder on Travis
  directories:
