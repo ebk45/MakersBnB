@@ -9,6 +9,13 @@ server.get('/', (request,response)=>{
     res.render('pages/signup');
 });
 
+server.get('/feed',(request,response)=>{
+    response.render('pages/feed');
+});
+
+server.get('/listing', (request, response)=>{
+    response.render('pages/listing');
+
 server.get('/spaces',(request,response)=>{
     res.render('pages/spaces');
 });
@@ -17,7 +24,7 @@ server.get('/spaces',(request,response)=>{
 server.use((request,response)=>{
     response.type('text/plain');
     response.status(505);
-    res.render('pages/error');
+    response.render('pages/error');
 });
 
 //Binding to a port

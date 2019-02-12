@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="public/stylesheets/style.css">
+    <h1> Available Spaces </h1>
+  </head>
+  <body>
+    <div class="buttons1" >
+      <form action = "/feed/create" method="post">
+        <input type="submit" value="List a Space">
+      </form>
+    </div>
+
+    <div class="dates" >
+      <form action = "/feed" method="post">
+        <input type="date" name="start-date" min="2019-01-01" placeholder="yyyy-mm-dd">
+        <input type="date" name="end-date" min="2019-01-01" placeholder="yyyy-mm-dd">
+        <input type="submit" value="Confirm Dates" onclick="updateFeed()">
+      </form>
+    </div>
+
+    <div class="listing" >
+      <ul>
+        <h2> Listing Title </h2>
+        <p> Here's some text describing the listing... Blah blah house </p>
+      </ul>
+    </div>
+
+  </body>
+</html>
