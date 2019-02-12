@@ -7,6 +7,9 @@ const app = express();
 
 app.use(logger('dev'))
 
+app.set('view engine', 'ejs');
+
+
 // Parse incoming requests data (https://github.com/expressjs/body-parser)
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
