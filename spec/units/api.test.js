@@ -2,9 +2,9 @@
 const Listing = require('../../server/controllers/listings')
 const axios = require('axios');
 
-async function getListing(){
+async function getListing() {
   try {
-    const response = await axios.get('http://localhost:8000/listing')
+    const response = await axios.get('http://localhost:8000/api/listings')
     return response
   } catch (error) {
     console.error(error)
@@ -14,8 +14,9 @@ async function getListing(){
 describe('API', () => {
   test('returns name, description and price of listing', async () => {
     const result = await getListing()
-    expect(result.name).toEqual('name')
-    expect(result.description).toEqual('description')
-    expect(result.price).toEqual(1000)
+    console.log(result)
+    expect(result.name[1]).toEqual('name')
+    expect(result.data[1].description).toEqual('description')
+    expect(result.data[1].price).toEqual(1000)
   })
 })
