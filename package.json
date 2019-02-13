@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "createDB": "psql -c 'create database makersbnb_dev;' -U postgres",
+    "createTestDB": "psql -c 'create database makersbnb_test;' -U postgres",
     "migrateDB": "$(npm bin)/sequelize db:migrate",
     "setupDB": "npm run createDB; npm run migrateDB",
     "seedDB": "$(npm bin)/sequelize db:seed:all",
