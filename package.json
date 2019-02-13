@@ -4,10 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "createDB": "psql -c 'create database makersbnb_dev;' -U postgres",
+    "migrateDB": "sequelize db:migrate",
+    "setupDB": "npm run createDB; npm run migrateDB",
+    "pretest": "NODE_ENV=test npm run migrateDB",
     "test": "$(npm bin)/cypress run --record  --key 6e551b3c-9d2f-48e8-9980-dd7ae1950161",
     "lint": "eslint cypress/*/*.js; eslint server/*/*.js; eslint app.js",
     "cypress:open": "cypress open",
-    "start:dev": "nodemon ./bin/www"
+    "start:dev": "nodemon ./bin/www",
+    "start:test": "NODE_ENV=test nodemon ./bin/www"
   },
   "repository": {
     "type": "git",
