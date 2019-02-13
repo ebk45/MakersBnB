@@ -7,8 +7,8 @@ module.exports = (sequelize, DataTypes) => {
       price: DataTypes.INTEGER
     }, {})
   Listing.associate = ({ User }) => {
-    //Listing.belongsTo(User)
-    //can create more associations here
+    // Listing.belongsTo(User)
+    // can create more associations here
   }
   return Listing
 }

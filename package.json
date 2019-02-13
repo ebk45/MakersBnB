@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "jest": {
+    "testEnvironment": "node"
+  },
   "scripts": {
     "createDB": "psql -c 'create database makersbnb_dev;' -U postgres",
     "createTestDB": "psql -c 'create database makersbnb_test;' -U postgres",
@@ -10,8 +13,9 @@
     "setupDB": "npm run createDB; npm run migrateDB",
     "seedDB": "$(npm bin)/sequelize db:seed:all",
     "pretest": "NODE_ENV=test npm run migrateDB; NODE_ENV=test npm run seedDB",
-    "test": "$(npm bin)/cypress run --record  --key 6e551b3c-9d2f-48e8-9980-dd7ae1950161",
-    "lint": "$(npm bin)/eslint cypress/*/*.js; eslint server/*/*.js; eslint app.js",
+    "test": "$(npm bin)/jest;$(npm bin)/cypress run --record  --key 6e551b3c-9d2f-48e8-9980-dd7ae1950161",
+    "unitTest": "$(npm bin)/jest",
+    "lint": "$(npm bin)/eslint cypress/*/*.js; $(npm bin)/eslint server/*/*.js; $(npm bin)/eslint app.js; $(npm bin)/eslint spec/*/*.js",
     "cypress:open": "$(npm bin)/cypress open",
     "start:dev": "nodemon ./bin/www",
     "start:test": "NODE_ENV=test nodemon ./bin/www"
