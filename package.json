@@ -5,13 +5,13 @@
   "main": "index.js",
   "scripts": {
     "createDB": "psql -c 'create database makersbnb_dev;' -U postgres",
-    "migrateDB": "sequelize db:migrate",
+    "migrateDB": "$(npm bin)/sequelize db:migrate",
     "setupDB": "npm run createDB; npm run migrateDB",
-    "seedDB": "sequelize db:seed:all",
+    "seedDB": "$(npm bin)/sequelize db:seed:all",
     "pretest": "NODE_ENV=test npm run migrateDB; NODE_ENV=test npm run seedDB",
     "test": "$(npm bin)/cypress run --record  --key 6e551b3c-9d2f-48e8-9980-dd7ae1950161",
-    "lint": "eslint cypress/*/*.js; eslint server/*/*.js; eslint app.js",
-    "cypress:open": "cypress open",
+    "lint": "$(npm bin)/eslint cypress/*/*.js; eslint server/*/*.js; eslint app.js",
+    "cypress:open": "$(npm bin)/cypress open",
     "start:dev": "nodemon ./bin/www",
     "start:test": "NODE_ENV=test nodemon ./bin/www"
   },
@@ -31,7 +31,8 @@
     "morgan": "^1.9.1",
     "pg": "^7.8.0",
     "pg-hstore": "^2.3.2",
-    "sequelize": "^4.42.0"
+    "sequelize": "^4.42.0",
+    "sequelize-cli": "^5.4.0"
   },
   "devDependencies": {
     "acorn": "^6.1.0",
