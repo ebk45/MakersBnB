@@ -4,7 +4,7 @@
     <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.2.1/minty/bootstrap.min.css" rel="stylesheet" integrity="sha384-jsT0TI7JBEWn8YstmA/9zrJCL1V9Nc3W8o0sjFOWfu7QFRWjxwELS43/lFzo9t6S" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="public/stylesheets/style.css">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">MakersBnB</a>
+  <a class="navbar-brand" href="http://localhost:8000">MakersBnB</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -12,17 +12,18 @@
   <div class="collapse navbar-collapse" id="navbarColor02">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Signup <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="http://localhost:8000/feed">Listings <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Listings</a>
+        <a class="nav-link" href="http://localhost:8000/feed/create">List a space</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">List a space</a>
+        <a class="nav-link" href="http://localhost:8000">Signup</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">About</a>
+        <a class="nav-link" href="#">Login</a>
       </li>
+
     </ul>
   </div>
 </nav>
@@ -45,21 +46,22 @@
 
     <div class="form-group" style="width: 10%;">
       <label for="exampleInputEmail1">Start Date</label>
-      <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="yyyy-mm-dd" min="2019-01-01" max="2020-01-01">
+      <input type="date" class="form-control" id="startDate" aria-describedby="emailHelp" placeholder="yyyy-mm-dd" min="2019-01-01" max="2020-01-01">
       <label for="exampleInputPassword1">End Date</label>
-      <input type="date" class="form-control" id="exampleInputPassword1" placeholder="yyyy-mm-dd" min="2019-01-01" max="2020-01-01">
+      <input type="date" class="form-control" id="endDate" placeholder="yyyy-mm-dd" min="2019-01-01" max="2020-01-01">
     </div>
 
 
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary" id="dateSubmit">Submit</button>
   </fieldset>
 </form>
 <br>
 
 <div align="left">
 <div class="card mb-3" style="width: 33%;" align="center">
-  <h2 class="card-header text-white alert-secondary">Listing 1</h2>
+  <h2 class="card-header text-white alert-secondary"><a href="http://localhost:8000/listing">Listing 1</a></h2>
     <div class="card-body">
+
       <h4 class="card-title">Åre, Sweden</h4>
       <h6 style="width: 100%;" class="card-subtitle text-muted">Cozy place for two in the snow</h6>
     </div>
