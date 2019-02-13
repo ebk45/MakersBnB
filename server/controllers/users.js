@@ -1,45 +1,46 @@
-const Listing = require('../models').Listing
+const User = require('../models').User
 
 module.exports = {
   create (req, res) {
-    return Listing
+    return User
       .create({
-        name: req.body.name,
-        description: req.body.description,
-        price: req.body.price
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        address: req.body.address,
+        email: req.body.email
       })
-      .then(listing => res.status(201).send(listing))
+      .then(user => res.status(201).send(user))
       .catch(error => res.status(400).send(error))
   },
   list (req, res) {
-    return Listing
+    return User
       .all()
-      .then(listings => res.status(200).send(listings))
+      .then(user => res.status(200).send(user))
       .catch(error => res.status(400).send(error))
   },
   retrieve (req, res) {
-    return Listing
+    return User
       .findById(req.params.id)
-      .then(listing => {
-        if (!listing) {
+      .then(user => {
+        if (!user) {
           return res.status(404).send({
-            message: 'Listing not found'
+            message: 'user not found'
           })
         }
-        return res.status(200).send(listing)
+        return res.status(200).send(user)
       })
       .catch(error => res.status(400).send(error))
   },
   delete (req, res) {
-    return Listing
+    return User
       .findById(req.params.id)
-      .then(listing => {
-        if (!listing) {
+      .then(user => {
+        if (!user) {
           return res.status(400).send({
-            message: 'listing not found'
+            message: 'user not found'
           })
         }
-        return listing
+        return user
           .destroy()
           .then(() => res.status(204).send())
           .catch((error) => res.status(400).send(error))
@@ -47,21 +48,22 @@ module.exports = {
       .catch((error) => res.status(400).send(error))
   },
   update (req, res) {
-    return Listing
+    return User
       .findById(req.params.id)
-      .then(listing => {
-        if (!listing) {
+      .then(user => {
+        if (!user) {
           return res.status(404).send({
-            message: 'listing not found'
+            message: 'user not found'
           })
         }
-        return listing
+        return user
           .update({
-            name: req.body.name || listing.name,
-            description: req.body.description || listing.description,
-            price: req.body.price || listing.price
+            firstName: req.body.firstName,
+            lastName: req.body.lastName,
+            address: req.body.address || user.address,
+            email: req.body.email || user.email
           })
-          .then(() => res.status(200).send(listing))
+          .then(() => res.status(200).send(user))
           .catch((error) => res.status(400).send(error))
       })
       .catch((error) => res.status(400).send(error))
