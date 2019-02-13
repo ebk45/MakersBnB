@@ -2,22 +2,25 @@
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.bulkInsert('Listings', [{
-      name: 'Cottage',
-      description: "It's so pwetty",
-      price: 10,
+    return queryInterface.bulkInsert('Users', [{
+      firstName: 'Captain',
+      lastName: 'America',
+      address: '123 World Street',
+      email: 'world@police.com',
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      name: 'House',
-      description: "I'm bigger than a cottage",
-      price: 20,
+      firstName: 'Vladimir',
+      lastName: 'Putin',
+      address: '1 The Kremlin',
+      email: 'puting@fake.com',
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      name: 'Mansion',
-      description: 'Fuck yeeeaah',
-      price: 30,
+      firstName: 'Theresa',
+      lastName: 'May',
+      address: 'Downing street',
+      email: 'may.be@gone.soon',
       createdAt: new Date(),
       updatedAt: new Date()
     }])
@@ -34,22 +37,25 @@ module.exports = {
   },
 
   down: (queryInterface, Sequelize) => {
-    queryInterface.bulkDelete('Listings', [{
-      name: 'Cottage',
-      description: "It's so pwetty",
-      price: 10,
+    return queryInterface.bulkDelete('Users', [{
+      firstName: 'Captain',
+      lastName: 'America',
+      address: '123 World Street',
+      email: 'world@police.com',
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      name: 'House',
-      description: "I'm bigger than a cottage",
-      price: 10,
+      firstName: 'Vladimir',
+      lastName: 'Putin',
+      address: '1 The Kremlin',
+      email: 'puting@fake.com',
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      name: 'Mansion',
-      description: 'Fuck yeeeaah',
-      price: 10,
+      firstName: 'Theresa',
+      lastName: 'May',
+      address: 'Downing street',
+      email: 'may.be@gone.soon',
       createdAt: new Date(),
       updatedAt: new Date()
     }])
