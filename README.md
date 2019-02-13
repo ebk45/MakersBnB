@@ -1,9 +1,16 @@
-### To set up the database
 
-Connect to `psql` and create the `makersbnb` database:
+# MakersBNB 
 
+
+## Quick Start
+> Run program using:
+```bash
+# Install dependencies
+npm install
+
+# Serve on localhost:8000
+npm run start:dev
+
+# Create database for dev
+createdb makersbnb_dev
 ```
-CREATE DATABASE makersbnb;
-```
-
-To set up the appropriate tables, connect to the database in `psql` and run the SQL scripts in the `db/migrations` folder in the given order.
