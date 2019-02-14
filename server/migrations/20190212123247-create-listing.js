@@ -17,6 +17,18 @@ module.exports = {
       price: {
         type: Sequelize.INTEGER
       },
+      location: {
+        type: Sequelize.STRING
+      },
+      image: {
+        type: Sequelize.STRING
+      },
+      datefrom: {
+        type: Sequelize.DATE
+      },
+      dateuntil: {
+        type: Sequelize.DATE
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
