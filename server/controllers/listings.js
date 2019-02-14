@@ -6,7 +6,11 @@ module.exports = {
       .create({
         name: req.body.name,
         description: req.body.description,
-        price: req.body.price
+        price: req.body.price,
+        location: req.body.location,
+        image: req.body.image,
+        datefrom: req.body.datefrom,
+        dateuntil: req.body.dateuntil
       })
       .then(listing => res.status(201).send(listing))
       .catch(error => res.status(400).send(error))
@@ -59,7 +63,11 @@ module.exports = {
           .update({
             name: req.body.name || listing.name,
             description: req.body.description || listing.description,
-            price: req.body.price || listing.price
+            price: req.body.price || listing.price,
+            location: req.body.location || listing.location,
+            image: req.body.image || listing.image,
+            datefrom: req.body.datefrom || listing.datefrom,
+            dateuntil: req.body.dateuntil || listing.dateuntil
           })
           .then(() => res.status(200).send(listing))
           .catch((error) => res.status(400).send(error))

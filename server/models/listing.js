@@ -4,7 +4,11 @@ module.exports = (sequelize, DataTypes) => {
     'Listing', {
       name: DataTypes.STRING,
       description: DataTypes.STRING,
-      price: DataTypes.INTEGER
+      price: DataTypes.INTEGER,
+      location: DataTypes.STRING,
+      image: DataTypes.STRING,
+      datefrom: DataTypes.DATE,
+      dateuntil: DataTypes.DATE
     }, {})
   Listing.associate = ({ User }) => {
     // Listing.belongsTo(User)

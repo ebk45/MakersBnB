@@ -5,22 +5,25 @@ module.exports = {
     return queryInterface.bulkInsert('Users', [{
       firstName: 'Captain',
       lastName: 'America',
-      address: '123 World Street',
       email: 'world@police.com',
+      password: 'password1!',
+      phone: '01234567890',
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
       firstName: 'Vladimir',
       lastName: 'Putin',
-      address: '1 The Kremlin',
       email: 'puting@fake.com',
+      password: 'password2!',
+      phone: '09876543210',
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
       firstName: 'Theresa',
       lastName: 'May',
-      address: 'Downing street',
       email: 'may.be@gone.soon',
+      password: 'password3!',
+      phone: '09876543211',
       createdAt: new Date(),
       updatedAt: new Date()
     }])
@@ -40,22 +43,25 @@ module.exports = {
     return queryInterface.bulkDelete('Users', [{
       firstName: 'Captain',
       lastName: 'America',
-      address: '123 World Street',
       email: 'world@police.com',
+      password: 'password1!',
+      phone: '01234567890',
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
       firstName: 'Vladimir',
       lastName: 'Putin',
-      address: '1 The Kremlin',
       email: 'puting@fake.com',
+      password: 'password2!',
+      phone: '09876543210',
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
       firstName: 'Theresa',
       lastName: 'May',
-      address: 'Downing street',
       email: 'may.be@gone.soon',
+      password: 'password3!',
+      phone: '09876543211',
       createdAt: new Date(),
       updatedAt: new Date()
     }])
