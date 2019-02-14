@@ -15,10 +15,10 @@
       <a class="nav-link" href="http://localhost:8000/feed">Listings </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="http://localhost:8000/feed/create">List a space</a>
+      <a class="nav-link active" href="http://localhost:8000/feed/create">List a space <span class="sr-only">(current)</span></a>
     </li>
     <li class="nav-item">
-      <a class="nav-link active" href="http://localhost:8000">Signup <span class="sr-only">(current)</span></a>
+      <a class="nav-link" href="http://localhost:8000">Signup</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="http://localhost:8000/login">Login</a>
@@ -33,30 +33,33 @@
 </head>
   <body>
   <fieldset>
-    <legend>Sign Up</legend>
+    <legend>Create Listing</legend>
+    <form action="feed_new" method="post">
     <div class="form-group">
-      <label for="Name">Name</label>
-      <input type="text" class="form-control" id="inputName" aria-describedby="name" placeholder="name">
+      <label for="Name"> Name </label>
+      <input type="text" class="form-control" id="name" aria-describedby="name" placeholder="name">
+      <small id="nameHelp" class="form-text text-muted">Give your place a name place</small>
     </div>
     <div class="form-group">
-      <label for="Email">Email Address</label>
-      <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="email address">
-      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      <label for="Description">Description</label>
+      <input type="text" class="form-control" id="description" aria-describedby="name" placeholder="description">
+      <small id="descriptionHelp" class="form-text text-muted">Add a little description of your place</small>
     </div>
     <div class="form-group">
-      <label for="Password">Password</label>
-      <input type="password" class="form-control" id="inputPassword" placeholder="password">
+      <label for="Price">Price</label>
+      <input type="number" class="form-control" id="price" aria-describedby="price" placeholder="price">
+      <small id="priceHelp" class="form-text text-muted">Add price in pounds</small>
     </div>
     <div class="form-group">
-      <label for="Selector">What will use MakersBnB for?</label>
-      <select class="form-control" id="exampleSelect1">
-        <option>Hostess with the mostest.</option>
-        <option>Guestest with the bestest.</option>
-        <option>Bit of Both!</option>
-      </select>
+      <label for="exampleInputEmail1">Available From</label>
+      <input type="date" class="form-control" id="availableFrom" aria-describedby="emailHelp" placeholder="yyyy-mm-dd" min="2019-01-01" max="2020-01-01">
+      <label for="exampleInputDate">Available Until</label>
+      <input type="date" class="form-control" id="availableUntil" placeholder="yyyy-mm-dd" min="2019-01-01" max="2020-01-01">
+    </div>
+    </form>
       <br>
       <form action="/feed" method="get">
-      <input type="submit" class="btn btn-primary" value="Submit">
+      <input type="submit" class="btn btn-primary" value="Add Listing">
     </form>
     <br>
   </fieldset>
