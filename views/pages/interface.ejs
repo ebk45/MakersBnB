@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Simple interface</title>
+
+  <script src="main.js"></script>
+
+</head>
+
+<body>
+
+  <form action="api/listings" method="post">
+    <input type="text" name="name" placeholder="Your Name">
+    <input type="text" name="description" placeholder="description">
+    <input type="text" name="price" placeholder="Price">
+    <input type="submit" value="Send">
+  </form>
+
+  <ul id="newListing"> </ul>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+
+      var $newlisting = $('newListing');
+
+      $.ajax({
+        type: 'GET',
+        url: 'api/listings',
+        success: function (data) {
+          console.log('success', data);
+        }
+        
+      });
+    });
+  </script>
+</body>
+
+</html>

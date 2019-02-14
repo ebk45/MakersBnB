@@ -31,6 +31,10 @@ app.get('/spaces', (request, response) => {
   response.render('pages/spaces')
 })
 
+app.get('/interface', (request, response) => {
+  response.render('pages/interface')
+})
+
 app.get('*', (req, res) => res.status(200).send({
   message: 'Welcome to the beginning of nothingness.'
 }))
