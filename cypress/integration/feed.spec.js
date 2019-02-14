@@ -42,10 +42,8 @@ context('Feed Page', function() {
   it('can click on large List a Space button', function() {
     cy.contains('List a Space').click()
     cy.url().should('eq', 'http://localhost:8000/feed/create')
-    cy.contains('Create Listing')
     cy.go('back')
     cy.url().should('eq', 'http://localhost:8000/feed')
-    cy.contains('Available Spaces')
   })
 
   it('successfully loads select dates form', function() {

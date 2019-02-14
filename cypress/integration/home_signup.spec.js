@@ -23,7 +23,7 @@ context('Home Page', function() {
     cy.get('#inputPassword').type('password123')
     cy.get('#exampleSelect1').select('Bit of Both!').should('have.value', 'Bit of Both!')
     cy.contains('Submit').click()
-    cy.url().should('eq', 'http://localhost:8000/feed')
+    cy.url().should('eq', 'http://localhost:8000/feed?')
     cy.go('back')
     cy.url().should('eq', 'http://localhost:8000/')
   })
