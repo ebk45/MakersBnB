@@ -6,8 +6,9 @@ module.exports = {
       .create({
         firstName: req.body.firstName,
         lastName: req.body.lastName,
-        address: req.body.address,
-        email: req.body.email
+        email: req.body.email,
+        password: req.body.password,
+        phone: req.body.phone
       })
       .then(user => res.status(201).send(user))
       .catch(error => res.status(400).send(error))
@@ -60,8 +61,9 @@ module.exports = {
           .update({
             firstName: req.body.firstName,
             lastName: req.body.lastName,
-            address: req.body.address || user.address,
-            email: req.body.email || user.email
+            email: req.body.email || user.email,
+            password: req.body.password || user.password,
+            phone: req.body.phone || user.phone
           })
           .then(() => res.status(200).send(user))
           .catch((error) => res.status(400).send(error))
