@@ -23,6 +23,10 @@ app.get('/feed', (request, response) => {
   response.render('pages/feed')
 })
 
+app.get('/feed/create', (request, response) => {
+  response.render('pages/create')
+})
+
 app.get('/listing', (request, response) => {
   response.render('pages/listing')
 })
