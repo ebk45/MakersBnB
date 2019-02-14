@@ -1,15 +1,15 @@
-context('Home Page', function() {
-  beforeEach(function() {
+context('Home Page', function () {
+  beforeEach(function () {
     cy.visit('/feed/create')
   })
 
-  it('successfully loads page that contains a title', function() {
+  it('successfully loads page that contains a title', function () {
     // https://on.cypress.io/hash
     // cy.hash().should('be.empty')
     cy.contains('Create Listing')
   })
 
-  it('checks page has correct form fields titles and text', function() {
+  it('checks page has correct form fields titles and text', function () {
     cy.contains('Name')
     cy.contains('Give your place a name')
     cy.contains('Description')
@@ -20,7 +20,7 @@ context('Home Page', function() {
     cy.contains('Available Until')
   })
 
-  it('fills fields in form and submits', function() {
+  it('fills fields in form and submits', function () {
     cy.get('#name').type('King James')
     cy.get('#description').type('small house big house medium sized house')
     cy.get('#price').type('123')
@@ -31,5 +31,4 @@ context('Home Page', function() {
     cy.go('back')
     cy.url().should('eq', 'http://localhost:8000/feed/create')
   })
-
 })
