@@ -2,10 +2,11 @@
 const express = require('express')
 const logger = require('morgan')
 const bodyParser = require('body-parser')
-
+const path = require('path')
 const app = express()
 
 app.use(logger('dev'))
+app.use(express.static(path.join(__dirname, 'public')))
 
 app.set('view engine', 'ejs')
 
@@ -35,9 +36,13 @@ app.get('/spaces', (request, response) => {
   response.render('pages/spaces')
 })
 
-app.get('*', (req, res) => res.status(200).send({
-  message: 'Welcome to the beginning of nothingness.'
-}))
+app.get('/interface', (request, response) => {
+  response.sendFile(path.join(__dirname, 'views/pages/index.html'))
+})
+
+// app.get('*', (req, res) => res.status(200).send({
+//   message: 'Welcome to the beginning of nothingness.'
+// }))
 
 // Express error handling middleware
 app.use((request, response) => {
