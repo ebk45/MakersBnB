@@ -40,9 +40,9 @@ app.get('/interface', (request, response) => {
   response.sendFile(path.join(__dirname, 'views/pages/index.html'))
 })
 
-app.get('*', (req, res) => res.status(200).send({
-  message: 'Welcome to the beginning of nothingness.'
-}))
+// app.get('*', (req, res) => res.status(200).send({
+//   message: 'Welcome to the beginning of nothingness.'
+// }))
 
 // Express error handling middleware
 app.use((request, response) => {
