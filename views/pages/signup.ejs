@@ -29,31 +29,32 @@
 </nav>
   <br>
   <br>
-  <h1><center> Make a Space </h1>
+  <h1><center> Sign Up </h1>
 </head>
-  <body>
-  <fieldset>
-    <legend>Sign Up</legend>
+  <body><center>
+  <fieldset  style="width: 25%;" align="left">
+    <legend></legend>
     <div class="form-group">
-      <label for="Name">Name</label>
-      <input type="text" class="form-control" id="inputName" aria-describedby="name" placeholder="name">
+      <label for="firstName">First Name</label>
+      <input type="text" class="form-control" id="inputFirstName" aria-describedby="name" placeholder="John">
+    </div>
+    <div class="form-group">
+      <label for="lastName">Last Name</label>
+      <input type="text" class="form-control" id="inputLastName" aria-describedby="name" placeholder="Smith">
     </div>
     <div class="form-group">
       <label for="Email">Email Address</label>
-      <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="email address">
-      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="john.smith@mail.com">
     </div>
     <div class="form-group">
       <label for="Password">Password</label>
-      <input type="password" class="form-control" id="inputPassword" placeholder="password">
+      <input type="password" class="form-control" id="inputPassword" placeholder="Password00!">
+      <small id="emailHelp" class="form-text text-muted"> Use at least one number and one symbol </small>
     </div>
     <div class="form-group">
-      <label for="Selector">What will use MakersBnB for?</label>
-      <select class="form-control" id="exampleSelect1">
-        <option>Hostess with the mostest.</option>
-        <option>Guestest with the bestest.</option>
-        <option>Bit of Both!</option>
-      </select>
+      <label for="Phone">Mobile Phone Number</label>
+      <input type="tel" class="form-control" id="inputPhone" placeholder="07377271357">
+    </div>
       <br>
       <form action="/feed" method="get">
       <input type="submit" class="btn btn-primary" value="Submit">

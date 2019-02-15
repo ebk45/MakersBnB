@@ -31,28 +31,40 @@
   <br>
   <h1><center> Make a Space </h1>
 </head>
-  <body>
-  <fieldset>
-    <legend>Create Listing</legend>
+  <body><center>
+  <fieldset style="width: 25%;" align="left" >
+    <legend></legend>
     <form action="feed_new" method="post">
-    <div class="form-group">
+    <div class="form-group" >
       <label for="Name"> Name </label>
-      <input type="text" class="form-control" id="name" aria-describedby="name" placeholder="name">
+      <input type="text" class="form-control" id="name" aria-describedby="name" placeholder="">
       <small id="nameHelp" class="form-text text-muted">Give your place a name place</small>
     </div>
     <div class="form-group">
       <label for="Description">Description</label>
-      <input type="text" class="form-control" id="description" aria-describedby="name" placeholder="description">
+      <input type="text" class="form-control" id="description" aria-describedby="name" placeholder="">
       <small id="descriptionHelp" class="form-text text-muted">Add a little description of your place</small>
     </div>
     <div class="form-group">
       <label for="Price">Price</label>
-      <input type="number" class="form-control" id="price" aria-describedby="price" placeholder="price">
+      <input type="number" class="form-control" id="price" aria-describedby="price" placeholder="">
       <small id="priceHelp" class="form-text text-muted">Add price in pounds</small>
     </div>
     <div class="form-group">
+      <label for="Location">Location</label>
+      <input type="text" class="form-control" id="location" aria-describedby="name" placeholder="City, Country">
+      <small id="descriptionHelp" class="form-text text-muted">Where is your place</small>
+    </div>
+    <div class="form-group">
+      <label for="image">Image</label>
+      <input type="file" class="form-control" id="image" aria-describedby="name" accept="image/png, image/jpeg" placeholder="upload image of your place">
+      <small id="descriptionHelp" class="form-text text-muted">Let others see your place</small>
+    </div>
+
+    <div class="form-group">
       <label for="exampleInputEmail1">Available From</label>
       <input type="date" class="form-control" id="availableFrom" aria-describedby="emailHelp" placeholder="yyyy-mm-dd" min="2019-01-01" max="2020-01-01">
+      <br>
       <label for="exampleInputDate">Available Until</label>
       <input type="date" class="form-control" id="availableUntil" placeholder="yyyy-mm-dd" min="2019-01-01" max="2020-01-01">
     </div>
