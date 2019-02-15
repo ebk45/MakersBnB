@@ -8,8 +8,8 @@ module.exports = {
       price: 10,
       location: 'Melbourne, Australia',
       image: '',
-      datefrom: 20190221,
-      dateuntil: 20190331,
+      datefrom: "2019-02-21",
+      dateuntil: "2019-03-31",
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
@@ -18,8 +18,8 @@ module.exports = {
       price: 20,
       location: 'Miami, USA',
       image: '',
-      datefrom: 20190125,
-      dateuntil: 20190609,
+      datefrom: "2019-01-25",
+      dateuntil: "2019-06-09",
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
@@ -28,8 +28,8 @@ module.exports = {
       price: 30,
       location: 'Havana, Cuba',
       image: '',
-      datefrom: 20190417,
-      dateuntil: 20191202,
+      datefrom: "2019-04-17",
+      dateuntil: "2019-12-02",
       createdAt: new Date(),
       updatedAt: new Date()
     }])
@@ -52,8 +52,8 @@ module.exports = {
       price: 10,
       location: 'Melbourne, Australia',
       image: '',
-      datefrom: 20190221,
-      dateuntil: 20190331,
+      datefrom: "2019-02-21",
+      dateuntil: "2019-03-31",
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
@@ -62,8 +62,8 @@ module.exports = {
       price: 20,
       location: 'Miami, USA',
       image: '',
-      datefrom: 20190125,
-      dateuntil: 20190609,
+      datefrom: "2019-01-25",
+      dateuntil: "2019-06-09",
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
@@ -72,8 +72,8 @@ module.exports = {
       price: 30,
       location: 'Havana, Cuba',
       image: '',
-      datefrom: 20190417,
-      dateuntil: 20191202,
+      datefrom: "2019-04-17",
+      dateuntil: "2019-12-02",
       createdAt: new Date(),
       updatedAt: new Date()
     }])
