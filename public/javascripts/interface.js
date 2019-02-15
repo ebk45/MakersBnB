@@ -4,7 +4,7 @@ $(document).ready(function () {
   console.log('working')
 
   getAllListings()
-  console.log('working')
+  console.log('still working')
 })
 
 let getAllListings = function () {
