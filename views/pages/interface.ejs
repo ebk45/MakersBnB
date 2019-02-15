@@ -40,7 +40,7 @@
         let data = $.get('api/listings/',
           function (listings) {
             $.each(listings, function (i, listing) {
-                newListing.append(' <li> name:' +listing.name + ' </li>');
+                newListing.append(' <li> name:' +listing.name + ', '' </li>');
                 })
             }) 
         }
