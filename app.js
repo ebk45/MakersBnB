@@ -40,6 +40,10 @@ app.get('/interface', (request, response) => {
   response.sendFile(path.join(__dirname, 'views/pages/index.html'))
 })
 
+app.get('/login', (request, response) => {
+  response.render('pages/login')
+})
+
 // app.get('*', (req, res) => res.status(200).send({
 //   message: 'Welcome to the beginning of nothingness.'
 // }))
